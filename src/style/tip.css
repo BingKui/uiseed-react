@@ -1,0 +1,31 @@
+.ui-toast{
+	font-size: 15px;
+	line-height: 20px;
+	color: #fff;
+	width: auto;
+	display: block;
+	text-align: center;
+	max-width: 275px;
+	min-width: 100px;
+	border-radius: 4px;
+	position: fixed;
+	padding: 6px 8px;
+	top: 30px;
+	left: 50%;
+}
+
+.ui-toast-default{
+	background-color: #337AB7;
+}
+.ui-toast-success{
+	background-color: #34B434;
+}
+.ui-toast-info{
+	background-color: #5BC0DE;
+}
+.ui-toast-warning{
+	background-color: #F0AD4E;
+}
+.ui-toast-error{
+	background-color: #D9534F;
+}
