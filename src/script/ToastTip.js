@@ -12,7 +12,8 @@ let ToastTip = React.createClass({
     },
     getInitialState(){
         return {
-            visible:true
+            visible: true,
+         	show: true
         };
     },
     getDefaultProps(){
@@ -25,6 +26,11 @@ let ToastTip = React.createClass({
         setTimeout(() => {
             this.setState({
                 visible:false
+            });
+        },this.props.timeout+500);
+        setTimeout(() => {
+            this.setState({
+                show:false
             });
         },this.props.timeout);
     },
@@ -41,11 +47,11 @@ let ToastTip = React.createClass({
     _returnClassName(){
         let _className = "ui-toast ui-toast-";
         _className += this.props.type;
+        _className += (this.state.show ? " show":" unshow");
         return _className;
     },
     render(){
-        //this._timeOut();
-
+          this._timeOut();
         return this.state.visible ? (<div ref="_toast" className={this._returnClassName()} style={{marginLeft:""}}>{this.props.children}</div>) : null;
 
     }

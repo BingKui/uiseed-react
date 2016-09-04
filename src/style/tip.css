@@ -1,11 +1,11 @@
-.ui-toast{
+.ui-toast {
 	font-size: 15px;
 	line-height: 20px;
 	color: #fff;
 	width: auto;
 	display: block;
 	text-align: center;
-	width:auto;
+	width: auto;
 	display: block;
 	max-width: 275px;
 	min-width: 100px;
@@ -15,19 +15,55 @@
 	top: 30px;
 	left: 50%;
 }
+.ui-toast.show{
+	animation: show_animate .5s;
+	-moz-animation: show_animate .5s;	/* Firefox */
+	-webkit-animation: show_animate .5s;	/* Safari 和 Chrome */
+	-o-animation: show_animate .5s;	/* Opera */
+}
+.ui-toast.unshow{
+	animation: unshow_animate .5s;
+	-moz-animation: unshow_animate .5s;	/* Firefox */
+	-webkit-animation: unshow_animate .5s;	/* Safari 和 Chrome */
+	-o-animation: unshow_animate .5s;	/* Opera */
+}
 
-.ui-toast-default{
+.ui-toast-default {
 	background-color: #337AB7;
 }
-.ui-toast-success{
+
+.ui-toast-success {
 	background-color: #34B434;
 }
-.ui-toast-info{
+
+.ui-toast-info {
 	background-color: #5BC0DE;
 }
-.ui-toast-warning{
+
+.ui-toast-warning {
 	background-color: #F0AD4E;
 }
-.ui-toast-error{
+
+.ui-toast-error {
 	background-color: #D9534F;
+}
+
+
+/*动画效果*/
+
+@keyframes show_animate {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes unshow_animate {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
