@@ -2,7 +2,7 @@
  * Created by kang on 16-9-2.
  */
 import React from 'react';
-import '../style/tip.css';
+import '../style/ToastTip.css';
 import $ from "jquery";
 
 let ToastTip = React.createClass({
@@ -19,7 +19,7 @@ let ToastTip = React.createClass({
     getDefaultProps(){
         return {
             type:'default',//default,success,info,warning,error
-            timeout:2000
+            timeout:2500
         };
     },
     _timeOut(){

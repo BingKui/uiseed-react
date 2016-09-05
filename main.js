@@ -11,4 +11,4 @@ let btnHandleClick = function(){
 var msg = "这个是提示信息";
 
 //ReactDOM.render(<Alert btnText='按钮' handleClick={btnHandleClick}>{msg}</Alert>, document.getElementById('root'));
-ReactDOM.render(<Tip>{msg}</Tip>, document.getElementById('root'));
+ReactDOM.render(<Tip type="success">{msg}</Tip>, document.getElementById('root'));
