@@ -1,0 +1,88 @@
+.ui-btn,
+.ui-btn-small,
+.ui-btn-big,
+.ui-btn-larger{
+	border: none;
+	font-size: 14px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	margin: 5px;
+	-webkit-tap-highlight-color: transparent;
+}
+.ui-btn-small{
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	padding: 0 8px;
+}
+.ui-btn-big{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	padding: 0 12px;
+}
+.ui-btn-larger{
+	height: 45px;
+	line-height: 45px;
+	font-size: 18px;
+	padding: 0 14px;
+}
+.ui-btn.disable,
+.ui-btn-small.disable,
+.ui-btn-big.disable,
+.ui-btn-larger.disable{
+	background-color: #eee;
+	color: #C0C0C0;
+}
+/*
+.ui-btn-default {
+	background-color: rgba(92, 92, 92, 1);
+}
+
+.ui-btn-default:active {
+	background-color: rgba(92, 92, 92, .6);
+}
+
+.ui-btn-primary {
+	background-color: rgba(51, 122, 183, 1);
+}
+
+.ui-btn-primary:active {
+	background-color: rgba(51, 122, 183, .6);
+}
+
+.ui-btn-success {
+	background-color: rgba(50, 180, 50, 1);
+}
+
+.ui-btn-success:active {
+	background-color: rgba(50, 180, 50, .6);
+}
+
+.ui-btn-info {
+	background-color: rgba(90, 190, 220, 1);
+}
+
+.ui-btn-info:active {
+	background-color: rgba(90, 190, 220, .6);
+}
+
+.ui-btn-warning {
+	background-color: rgba(240, 170, 78, 1);
+}
+
+.ui-btn-warning:active {
+	background-color: rgba(240, 170, 78, .6);
+}
+
+.ui-btn-danger {
+	background-color: rgba(220, 80, 80, 1);
+}
+
+.ui-btn-danger:active {
+	background-color: rgba(220, 80, 80, .6);
+}*/
