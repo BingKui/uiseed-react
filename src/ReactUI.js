@@ -1,7 +1,9 @@
 import Button from './script/Button';
+import ToastTip from './script/ToastTip';
 
 var ReactUI = {
-	Button:Button
+	Button:Button,
+	ToastTip:ToastTip
 };
 
 try {

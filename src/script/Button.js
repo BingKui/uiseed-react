@@ -2,17 +2,17 @@
  * Created by 康兵奎 on 2016/9/5.
  */
 import React from "react";
-import PropClassMixin from './mixins/PropClassMixin';
+import ComponentBase from './mixins/ComponentBase';
 import Config from './mixins/Config';
 import "../style/base.css";
 import "../style/Button.css";
 
 
 let Button = React.createClass({
-	mixins: [PropClassMixin],
+	mixins: [ComponentBase],
     propTypes: {
         size: React.PropTypes.oneOf(['small', 'big', 'larger']),//small,big,larger
-        style: React.PropTypes.oneOf(['default', 'primary', 'success', 'info', 'warning', 'danger']),
+        theme: React.PropTypes.oneOf(['default', 'primary', 'success', 'info', 'warning', 'danger']),
         disable: React.PropTypes.bool,
         radius: React.PropTypes.bool,
         block: React.PropTypes.bool,
@@ -20,7 +20,7 @@ let Button = React.createClass({
     },
     getDefaultProps() {
         return {
-            style: 'default',  //primary,success,info,warning,danger
+            theme: 'default',  //primary,success,info,warning,danger
             handleClick: function () {
             }
         };

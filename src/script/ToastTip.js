@@ -2,12 +2,17 @@
  * Created by kang on 16-9-2.
  */
 import React from 'react';
+import ComponentBase from './mixins/ComponentBase';
+import Config from './mixins/Config';
+import className from './util/className';
+import '../style/base.css';
 import '../style/ToastTip.css';
 import $ from "jquery";
 
 let ToastTip = React.createClass({
+	mixins: [ComponentBase],
     propTypes:{
-        type:React.PropTypes.string,
+        theme:React.PropTypes.string,
         timeout:React.PropTypes.number
     },
     getInitialState(){
@@ -18,7 +23,7 @@ let ToastTip = React.createClass({
     },
     getDefaultProps(){
         return {
-            type:'default',//default,success,info,warning,error
+            theme:'default',//default,primary,success,info,warning,danger
             timeout:2500
         };
     },
@@ -39,20 +44,18 @@ let ToastTip = React.createClass({
     },
     _getWidth(){
         let _toast = this.refs._toast;
-        let _left = - ($(_toast).width()) / 2;
+        let _left = - ($(_toast).width()+20) / 2;
         $(_toast).css({
             marginLeft: _left
         });
     },
     _returnClassName(){
-        let _className = "ui-toast ui-toast-";
-        _className += this.props.type;
-        _className += (this.state.show ? " show":" unshow");
-        return _className;
+    	let _class = className(Config.toastTip,this.getPropClass(),(this.state.show ? "show":"unshow"));
+        return _class;
     },
     render(){
-          this._timeOut();
-        return this.state.visible ? (<div ref="_toast" className={this._returnClassName()} style={{marginLeft:""}}>{this.props.children}</div>) : null;
+        this._timeOut();
+        return this.state.visible ? (<div ref="_toast" className={this._returnClassName()}>{this.props.children}</div>) : null;
 
     }
 });

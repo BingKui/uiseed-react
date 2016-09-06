@@ -12,24 +12,24 @@ let btnHandleClick = function(){
 var msg = "这个是提示信息";
 var btnList = <div>
 	<ReactUI.Button radius handleClick={btnHandleClick}>按钮</ReactUI.Button>
-	<ReactUI.Button radius disable style="primary">按钮</ReactUI.Button>
-	<ReactUI.Button radius style="success">按钮</ReactUI.Button>
-	<ReactUI.Button radius style="info">按钮</ReactUI.Button>
-	<ReactUI.Button radius style="warning">按钮</ReactUI.Button>
-	<ReactUI.Button radius style="danger">按钮</ReactUI.Button>
+	<ReactUI.Button radius disable them="primary">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="success">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="info">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="warning">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="danger">按钮</ReactUI.Button>
 	<p>不同规格的按钮</p>
 	<p>small</p>
-	<ReactUI.Button radius style="danger" size="small">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="danger" size="small">按钮</ReactUI.Button>
 	<p>big</p>
-	<ReactUI.Button radius style="danger" size="big">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="danger" size="big">按钮</ReactUI.Button>
 	<p>larger</p>
-	<ReactUI.Button radius style="danger" size="larger">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="danger" size="larger">按钮</ReactUI.Button>
 	<p>list-btn</p>
-	<ReactUI.Button radius style="success" size="small">按钮</ReactUI.Button>
-	<ReactUI.Button radius style="success">按钮</ReactUI.Button>
-	<ReactUI.Button radius style="success" size="big">按钮</ReactUI.Button>
-	<ReactUI.Button radius style="success" size="larger">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="success" size="small">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="success">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="success" size="big">按钮</ReactUI.Button>
+	<ReactUI.Button radius them="success" size="larger">按钮</ReactUI.Button>
 </div>;
 
-//ReactDOM.render(<ToastTip type="success">{msg}</ToastTip>, document.getElementById('root'));
-ReactDOM.render(btnList,document.getElementById('btn'));
+ReactDOM.render(<ReactUI.ToastTip them="success">{msg}</ReactUI.ToastTip>, document.getElementById('root'));
+//ReactDOM.render(btnList,document.getElementById('btn'));

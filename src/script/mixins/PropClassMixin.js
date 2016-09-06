@@ -28,8 +28,8 @@ module.exports = {
      * @return {string}
      */
     getStyleClass:function() {
-    	if(this.props.style){
-	        return Config.classPrefix + this.props.style;
+    	if(this.props.theme){
+	        return Config.classPrefix + this.props.theme;
     	}
     	return '';
     }, 

@@ -1,6 +1,6 @@
 /*配置前缀*/
-let Config = {
+module.exports = {
 	classPrefix:'ui-',
-    btn:"ui-btn"
+    btn:"ui-btn",
+    toastTip:'ui-toast'
 };
-module.exports = Config;

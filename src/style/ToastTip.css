@@ -28,7 +28,7 @@
 	-o-animation: unshow_animate .5s;	/* Opera */
 }
 
-.ui-toast-default {
+/*.ui-toast-default {
 	background-color: #337AB7;
 }
 
@@ -46,7 +46,7 @@
 
 .ui-toast-error {
 	background-color: #D9534F;
-}
+}*/
 
 
 /*动画效果*/
