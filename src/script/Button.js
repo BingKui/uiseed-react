@@ -4,6 +4,7 @@
 import React from "react";
 import ComponentBase from './mixins/ComponentBase';
 import Config from './mixins/Config';
+import className from './util/className';
 import "../style/base.css";
 import "../style/Button.css";
 
@@ -37,8 +38,8 @@ let Button = React.createClass({
         } else {
         	_class.push(Config.btn);
         }
-        _class.push(this.getPropClass());
-        return _class.join(" ");
+        const _className = className(_class, this.getPropClass());
+        return _className;
     },
     render(){
         return <button className={this.returnClass()} onClick={this.props.disable ? null : this._click}>{this.props.children}</button>;

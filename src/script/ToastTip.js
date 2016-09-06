@@ -17,7 +17,7 @@ let ToastTip = React.createClass({
     },
     getInitialState(){
         return {
-            visible: true,
+            visible: false,
          	show: true
         };
     },
@@ -39,22 +39,29 @@ let ToastTip = React.createClass({
             });
         },this.props.timeout);
     },
-    componentDidMount(){
-        this._getWidth();
+    componentDidUpdate(){
+	    this._getWidth();
     },
     _getWidth(){
         let _toast = this.refs._toast;
+        console.log();
         let _left = - ($(_toast).width()+20) / 2;
         $(_toast).css({
             marginLeft: _left
         });
+    },
+    open(){
+    	this.setState({
+            visible:true,
+            show: true
+        });
+        this._timeOut();
     },
     _returnClassName(){
     	let _class = className(Config.toastTip,this.getPropClass(),(this.state.show ? "show":"unshow"));
         return _class;
     },
     render(){
-        this._timeOut();
         return this.state.visible ? (<div ref="_toast" className={this._returnClassName()}>{this.props.children}</div>) : null;
 
     }

@@ -16,7 +16,7 @@ module.exports = {
     ],
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'ReactUI.js'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
