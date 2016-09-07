@@ -44,7 +44,6 @@ let ToastTip = React.createClass({
     },
     _getWidth(){
         let _toast = this.refs._toast;
-        console.log();
         let _left = - ($(_toast).width()+20) / 2;
         $(_toast).css({
             marginLeft: _left
@@ -55,15 +54,14 @@ let ToastTip = React.createClass({
             visible:true,
             show: true
         });
-        this._timeOut();
+       this._timeOut();
     },
     _returnClassName(){
     	let _class = className(Config.toastTip,this.getPropClass(),(this.state.show ? "show":"unshow"));
-        return _class;
+      return _class;
     },
     render(){
-        return this.state.visible ? (<div ref="_toast" className={this._returnClassName()}>{this.props.children}</div>) : null;
-
+      return this.state.visible ? (<div ref="_toast" className={this._returnClassName()}>{this.props.children}</div>) : null;
     }
 });
 module.exports = ToastTip;
