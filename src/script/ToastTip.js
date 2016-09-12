@@ -28,16 +28,17 @@ let ToastTip = React.createClass({
         };
     },
     _timeOut(){
+    	let _th = this;
         setTimeout(() => {
-            this.setState({
+            _th.setState({
                 visible:false
             });
-        },this.props.timeout+500);
+        },_th.props.timeout+500);
         setTimeout(() => {
-            this.setState({
+            _th.setState({
                 show:false
             });
-        },this.props.timeout);
+        },_th.props.timeout);
     },
     componentDidUpdate(){
 	    this._getWidth();
@@ -58,10 +59,10 @@ let ToastTip = React.createClass({
     },
     _returnClassName(){
     	let _class = className(Config.toastTip,this.getPropClass(),(this.state.show ? "show":"unshow"));
-      return _class;
+    	return _class;
     },
     render(){
-      return this.state.visible ? (<div ref="_toast" className={this._returnClassName()}>{this.props.children}</div>) : null;
+    	return this.state.visible ? (<div ref="_toast" className={this._returnClassName()}>{this.props.children}</div>) : null;
     }
 });
 module.exports = ToastTip;
